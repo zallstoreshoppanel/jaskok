@@ -1,0 +1,137 @@
+<!DOCTYPE html><html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jasgen/Jasjok by RIFF - Price List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #1e1e2f, #3a3a5f);
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            max-width: 450px;
+            margin: auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+        }
+        h1 {
+            color: #ffcc00;
+        }
+        img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+        .price-list {
+            list-style: none;
+            padding: 0;
+        }
+        .price-list li {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 12px;
+            margin: 7px 0;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .order-btn {
+            display: block;
+            margin: 10px auto;
+            padding: 12px;
+            background: #ffcc00;
+            color: black;
+            border: none;
+            border-radius: 7px;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .order-btn:hover {
+            background: #e6b800;
+            transform: scale(1.05);
+            transition: 0.3s;
+        }
+        .dropdown {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            right: 0;
+            background: rgba(255, 255, 255, 0.1);
+            min-width: 200px;
+            box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+            padding: 10px;
+            border-radius: 5px;
+            text-align: left;
+        }
+        .testimonial {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+        .stars {
+            color: #ffcc00;
+        }
+    </style>
+    <script>
+        function order(harga, fee) {
+            let message = `Halo, saya ingin order dengan harga ${harga} dan fee ${fee}.`;
+            let waLink = `https://wa.me/6283821914043?text=${encodeURIComponent(message)}`;
+            window.location.href = waLink;
+        }
+        function toggleDropdown() {
+            let dropdown = document.getElementById("dropdown-content");
+            dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Jasgen/Jasjok by RIFF</h1>
+        <img src="https://files.catbox.moe/jo1p3k.jpg" alt="Banner Keren AI"><div class="dropdown">
+        <button class="order-btn" onclick="toggleDropdown()">TESTIMONI</button>
+        <div class="dropdown-content" id="dropdown-content">
+            <div class="testimonial">
+                <img src="https://via.placeholder.com/100x50" alt="Testimoni 1">
+                <p><em>"Anjir gw joki menang terus!"</em></p>
+                <p class="stars">★★★★★</p>
+            </div>
+            <div class="testimonial">
+                <img src="https://via.placeholder.com/100x50" alt="Testimoni 2">
+                <p><em>"Service mantap, selalu menang!"</em></p>
+                <p class="stars">★★★★★</p>
+            </div>
+            <div class="testimonial">
+                <img src="https://via.placeholder.com/100x50" alt="Testimoni 3">
+                <p><em>"langganan gua ni!"</em></p>
+                <p class="stars">★★★★★</p>
+            </div>
+<div class="testimonial">
+                <img src="https://via.placeholder.com/100x50" alt="Testimoni 4">
+                <p><em>"hahahah awal nya gw ragu anjir, sumpah ga nyesel"</em></p>
+                <p class="stars">★★★★★</p>
+            </div>
+        </div>
+    </div>
+
+    <ul class="price-list">
+        <li>1k : 500p <button class="order-btn" onclick="order('1k', '500p')">Order</button></li>
+        <li>2k : 1.500p <button class="order-btn" onclick="order('2k', '1.500p')">Order</button></li>
+        <li>3k : 1k <button class="order-btn" onclick="order('3k', '1k')">Order</button></li>
+        <li>4k : 2k <button class="order-btn" onclick="order('4k', '2k')">Order</button></li>
+        <li>5k : 2.500p <button class="order-btn" onclick="order('5k', '2.500p')">Order</button></li>
+        <li>6k : 3k <button class="order-btn" onclick="order('6k', '3k')">Order</button></li>
+        <li>7k : 3.500p <button class="order-btn" onclick="order('7k', '3.500p')">Order</button></li>
+    </ul>
+</div>
+
+</body>
+</html>
